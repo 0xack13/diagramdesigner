@@ -1,4 +1,3 @@
-
 :root {
   --border-color: #cacaca;
   --background-color: #ffffff;
@@ -53,7 +52,7 @@ header a {
 
 .col {
   overflow: auto;
-  width: 100%;
+  width: 300px;
   height: 100%;
   border-right: 1px solid var(--border-color);
 }
@@ -91,6 +90,20 @@ cursor: pointer;
   font-weight: bold;
 }
 
+.btn-export {
+  float: right;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #0e5ba3;
+  background: #4ea9ff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 5;
+}
 
 .btn-clear {
   float: right;
@@ -102,24 +115,62 @@ cursor: pointer;
   border: 1px solid #96015b;
   background: #e3195a;
   padding: 5px 10px;
-  border-radius: 17px;
-  width: 300px;
+  border-radius: 4px;
   cursor: pointer;
   z-index: 5;
+}
+.swal-wide{
+    width:80% !important;
+}
+
+.btn-lock {
+  float: right;
+  position: absolute;
+  bottom: 10px;
+  right: 140px;
+  display: flex;
+  font-size: 24px;
+  color: white;
+  padding: 5px 10px;
+  background: #555555;
+  border-radius: 4px;
+  border-right: 1px solid var(--border-color);
+  z-index: 5;
+  cursor: pointer;
+}
+
+.bar-zoom {
+  float: right;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  font-size: 24px;
+  color: white;
+  padding: 5px 10px;
+  background: #555555;
+  border-radius: 4px;
+  border-right: 1px solid var(--border-color);
+  z-index: 5;
+}
+.bar-zoom svg {
+  cursor: pointer;
+  padding-left: 10px;
+}
+.bar-zoom svg:nth-child(1) {
+  padding-left: 0px;
 }
 
 #drawflow {
   position: relative;
-  /*width: calc(100vw - 301px);*/
-  width: 100vw;
-  /*height: calc(100% - 50px);*/
-  height: 100vw;
-  /*top: 40px;*/
+  width: calc(100vw - 301px);
+  height: calc(100% - 50px);
+  top: 40px;
   background: var(--background-color);
-  background-size: 40px 40px;
+  background-size: 25px 25px;
   background-image:
-   linear-gradient(to right, #000000 1px, transparent 1px),
-   linear-gradient(to bottom, #000000 1px, transparent 1px);
+   linear-gradient(to right, #f1f1f1 1px, transparent 1px),
+   linear-gradient(to bottom, #f1f1f1 1px, transparent 1px);
 }
 
 @media only screen and (max-width: 768px) {
@@ -200,8 +251,8 @@ cursor: pointer;
 }
 
 .drawflow-node .title-box {
-  height: 50px;
-  line-height: 50px;
+  height: 100px;
+  line-height: 100px;
   background: var(--background-box-title);
   border-bottom: 1px solid #e9e9e9;
   border-radius: 4px 4px 0px 0px;

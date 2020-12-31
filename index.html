@@ -9,8 +9,13 @@
 <body>
 
   <script src="df.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="beautiful.css" />
-  <link rel="stylesheet" type="text/css" href="df.min.css" />
+  <link rel="stylesheet" type="text/css" href="df.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
   <header>
     <h2>Drawflow</h2>
   </header>
@@ -19,13 +24,10 @@
       <div class="drag-drawflow" draggable="true" ondragstart="drag(event)" data-node="facebook">
         <i class="fab fa-facebook"></i><span> Facebook</span>
       </div>
-    <div class="col-right">
-      <div id="drawflow" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <div class="btn-clear" onclick="editor.clearModuleSelected()">Clear</div>
-        </div>
-      </div>
     </div>
-  </div>
+    <div class="col-right">
+      <div id="drawflow" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
   </div>
   <script>
     var id = document.getElementById("drawflow");
@@ -64,7 +66,7 @@
             }
           },
           "pos_x": 347,
-          "pos_y": 87
+          "pos_y": 250
         }
       }
     }
